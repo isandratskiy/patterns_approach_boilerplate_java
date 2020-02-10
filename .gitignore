@@ -2,6 +2,7 @@
 ## User-specific stuff:
 .gradle
 .allure
+*.config
 **/build
 **/out
 **/allure-results
