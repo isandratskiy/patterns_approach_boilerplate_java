@@ -5,7 +5,7 @@ import model.UserModel;
 import org.junit.jupiter.api.*;
 
 import static factory.CustomerFactory.*;
-import static factory.CustomerType.*;
+import static factory.CustomerTypeEnum.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CustomerFactoryTest {

@@ -1,5 +1,5 @@
 package factory;
 
-public enum CustomerType {
+public enum CustomerTypeEnum {
     WEB, REST, DEFAULT
 }

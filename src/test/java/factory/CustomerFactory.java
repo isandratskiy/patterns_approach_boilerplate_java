@@ -1,7 +1,7 @@
 package factory;
 
 public class CustomerFactory {
-    public static CustomerSupplier getCustomer(CustomerType type) {
+    public static CustomerSupplier getCustomer(CustomerTypeEnum type) {
         CustomerSupplier manager;
 
         switch (type) {
