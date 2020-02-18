@@ -9,15 +9,15 @@ import static factory.CustomerType.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CustomerFactoryTest {
-    private CustomerManager customerManager;
+    private CustomerSupplier customerSupplier;
     private UserModel customer;
 
     @Nested
     class WhenCustomerTypeIsRest {
         @BeforeEach
         void arrange() {
-            customerManager = getCustomer(REST);
-            customer = customerManager.getUser();
+            customerSupplier = getCustomer(REST);
+            customer = customerSupplier.getUser();
         }
 
         @Test
@@ -27,14 +27,14 @@ public class CustomerFactoryTest {
 
         @Test
         void shouldBeEqualWithSameObject() {
-            val sameCustomer = customerManager.getUser();
+            val sameCustomer = customerSupplier.getUser();
             assertEquals(customer, sameCustomer);
         }
 
         @Test
         void shouldBeNotEqualAfterReset() {
-            customerManager.resetUser();
-            val newCustomer = customerManager.getUser();
+            customerSupplier.resetUser();
+            val newCustomer = customerSupplier.getUser();
             assertNotEquals(customer, newCustomer);
         }
     }
@@ -43,8 +43,8 @@ public class CustomerFactoryTest {
     class WhenCustomerTypeIsWeb {
         @BeforeEach
         void arrange() {
-            customerManager = getCustomer(WEB);
-            customer = customerManager.getUser();
+            customerSupplier = getCustomer(WEB);
+            customer = customerSupplier.getUser();
         }
 
         @Test
@@ -57,8 +57,8 @@ public class CustomerFactoryTest {
     class WhenCustomerTypeIsDefault {
         @BeforeEach
         void arrange() {
-            customerManager = getCustomer(DEFAULT);
-            customer = customerManager.getUser();
+            customerSupplier = getCustomer(DEFAULT);
+            customer = customerSupplier.getUser();
         }
 
         @Test

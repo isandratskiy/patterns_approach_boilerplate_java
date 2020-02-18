@@ -1,18 +1,18 @@
 package factory;
 
 public class CustomerFactory {
-    public static CustomerManager getCustomer(CustomerType type) {
-        CustomerManager manager;
+    public static CustomerSupplier getCustomer(CustomerType type) {
+        CustomerSupplier manager;
 
         switch (type) {
             case REST:
-                manager = new RestUserManager();
+                manager = new RestUser();
                 break;
             case WEB:
-                manager = new WebUserManager();
+                manager = new WebUser();
                 break;
             default:
-                manager = new DefaultUserManager();
+                manager = new DefaultUser();
                 break;
         }
         return manager;

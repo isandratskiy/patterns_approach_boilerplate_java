@@ -2,7 +2,7 @@ package factory;
 
 import model.UserModel;
 
-public class DefaultUserManager extends CustomerManager {
+public class DefaultUser extends CustomerSupplier {
     @Override
     protected UserModel createUser() {
         return new UserModel().toBuilder()

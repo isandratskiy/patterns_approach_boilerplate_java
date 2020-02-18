@@ -4,8 +4,10 @@ import com.google.common.flogger.FluentLogger;
 import lombok.val;
 import model.UserModel;
 
+import static com.google.common.flogger.FluentLogger.*;
+
 public class RestCreationUser implements CreatableUser {
-    private static final FluentLogger logger = FluentLogger.forEnclosingClass();
+    private static final FluentLogger logger = forEnclosingClass();
 
     @Override
     public UserModel createUser(String firstName, String lastName) {
