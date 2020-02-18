@@ -1,4 +1,4 @@
-package dependency.injection;
+package dependency_injection;
 
 import com.google.inject.Inject;
 import model.UserModel;
